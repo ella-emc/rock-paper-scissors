@@ -8,7 +8,7 @@ function getComputerChoice() {
         return "scissors";
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound(computerSelection, playerSelection) {
     playerChoice = playerSelection.toLowerCase();
 
     // PLAYER WINS
@@ -32,6 +32,12 @@ function playRound(playerSelection, computerSelection) {
         return "It's a draw!";
 }
 
+function game() {
+    let gameRound = 0;
+
+    while (gameRound < 5)
+        playRound()
+}
 
 const computerSelection = getComputerChoice();
 const playerSelection = prompt("Enter your choice (rock, paper, or scissors): ");
