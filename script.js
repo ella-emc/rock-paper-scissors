@@ -36,7 +36,8 @@ function game() {
     let gameRound = 0;
 
     while (gameRound < 5)
-        playRound()
+        playRound();
+        gameRound++;
 }
 
 const computerSelection = getComputerChoice();
