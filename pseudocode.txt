@@ -2,49 +2,56 @@ Initialize gameRound to 0
 Initialize computerWin to 0
 Initialize userWin to 0
 
+While playAgain is true
+    While (gameRound < 5)
+        Generate random number from 1 to 3 (inclusive)
+        Store random number in variable rand
+        If rand == 1
+                return "rock"
+            else if rand == 2
+                return "paper"
+            else
+                return "scissors"
 
-While (gameRound < 5)
-    Generate random number from 1 to 3 (inclusive)
-    Store random number in variable rand
-    If rand == 1
-            return "rock"
-        else if rand == 2
-            return "paper"
-        else
-            return "scissors"
+        Get player's choice
 
-    Get player's choice
+        If computer's choice is "rock" and player's choice is "paper"
+                increment userWin
+                output "You win! Paper beats rock."
+            else if computer's choice is "paper" and player's choice is "scissors"
+                increment userWin
+                output "You win! Scissors beat paper."
+            else if computer's choice is "scissors" and player's choice is "rock"
+                increment userWin
+                output "You win! Rock beats scissors."
+            else if computer's choice is "rock" and player's choice is "scissors"
+                increment computerWin
+                output "You lose! Rock beats scissors."
+            else if computer's choice is "paper" and player's choice is "rock"
+                increment computerWin
+                output "You lose! Paper beats rock."
+            else if computer's choice is "scissors" and player's choice is "paper"
+                increment computerWin
+                output "You lose! Scissors beat paper."
+            else
+                output "It's a draw!"
+        
+        Increment gameRound
+    END WHILE
 
-    If computer's choice is "rock" and player's choice is "paper"
-            increment userWin
-            output "You win! Paper beats rock."
-        else if computer's choice is "paper" and player's choice is "scissors"
-            increment userWin
-            output "You win! Scissors beat paper."
-        else if computer's choice is "scissors" and player's choice is "rock"
-            increment userWin
-            output "You win! Rock beats scissors."
-        else if computer's choice is "rock" and player's choice is "scissors"
-            increment computerWin
-            output "You lose! Rock beats scissors."
-        else if computer's choice is "paper" and player's choice is "rock"
-            increment computerWin
-            output "You lose! Paper beats rock."
-        else if computer's choice is "scissors" and player's choice is "paper"
-            increment computerWin
-            output "You lose! Scissors beat paper."
-        else
-            output "It's a draw!"
+    If userWin > computerWin
+        output "Congratulations! You beat the computer."
+    else if userwin < computerWin 
+        output "Oh no! You lost against the computer."
+    else
+        output "Wow, it's a tie!"
     
-    Increment gameRound
-    
+    Get playAgain (y/n)
 
-If userWin > computerWin
-    output "Congratulations! You beat the computer."
-else if userwin < computerWin 
-    output "Oh no! You lost against the computer."
-else
-    output "Wow, it's a tie!"
+    If playAgain is 'n' or 'N'
+        Break out of loop
+END WHILE
+    
 
 
 
