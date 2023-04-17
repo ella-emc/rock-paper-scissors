@@ -64,6 +64,14 @@ function game() {
 
 let userWin = 0;
 let computerWin = 0;
+let playAgain = true;
 
-game();
+while (playAgain) {
+    game();
+    let userWin = 0;
+    let computerWin = 0;
+    let choice = prompt("Play again (y/n)? ");
 
+    if (choice.toLowerCase() === "n")
+        playAgain = false;
+}
