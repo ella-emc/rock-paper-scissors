@@ -3,7 +3,7 @@ Initialize computerWin to 0
 Initialize userWin to 0
 
 
-While (gameRound <= 5)
+While (gameRound < 5)
     Generate random number from 1 to 3 (inclusive)
     Store random number in variable rand
     If rand == 1
