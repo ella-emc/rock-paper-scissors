@@ -72,6 +72,8 @@ while (playAgain) {
     let computerWin = 0;
     let choice = prompt("Play again (y/n)? ");
 
-    if (choice.toLowerCase() === "n")
+    if (choice.toLowerCase() === "n") {
+        console.log("Thank you for playing.");
         playAgain = false;
+    }
 }
